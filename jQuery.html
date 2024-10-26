@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <script>
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1stPara'>Paragraph 1</p>\
+                            <p id='2ndPara'>Paragraph 2</p>\
+                            <p id='3rdPara'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            //adding css to give color to the first paragraph as red
+            $("#1stPara").css({"color":"red"});
+            //adding css to give color to the first paragraph as blue
+            $("#2ndPara").css({"color":"blue"});
+            //adding css to give color to the first paragraph as green
+            $("#3rdPara").css({"color":"green"});
+            //function to hide the h1 heading after clicking the 3rd paragraph
+            $("#3rdPara").click(function(){
+                $('h1').hide();
+            })
+        });
+        
+
+    </script>
+</html>
